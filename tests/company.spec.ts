@@ -3,26 +3,26 @@ import companyData from '../test-data/company.json';
 
 test.describe.configure({ mode: 'parallel' });
 
-test.describe('Company Page - Hero Section', () => {
+test.describe('Company Page - Why MultiBank Group', () => {
   test('should be reachable via Company nav item on mb.io', async ({ companyPage }) => {
     await companyPage.navigateViaNav();
     await expect(companyPage.heroHeading).toBeVisible();
   });
 
-  test('should display hero heading "Why MultiBank Group?"', async ({ companyPage }) => {
+  test('should display "Why MultiBank Group?" heading', async ({ companyPage }) => {
     await companyPage.navigate();
     const heading = await companyPage.getHeroHeading();
     expect(heading).toContain(companyData.heroHeading);
   });
 
-  test('should display hero description containing expected text', async ({ companyPage }) => {
+  test('should display the Why MultiBank Group description', async ({ companyPage }) => {
     await companyPage.navigate();
     const description = await companyPage.getHeroDescription();
     expect(description).toContain(companyData.heroDescriptionContains);
   });
 });
 
-test.describe('Company Page - Statistics', () => {
+test.describe('Company Page - Key Statistics', () => {
   test('should display all 3 stat values', async ({ companyPage }) => {
     await companyPage.navigate();
 

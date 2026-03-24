@@ -152,7 +152,7 @@ Evidence of cross-browser runs is committed to `docs/evidence/`.
 | `home.spec.ts` | `home.json` | 22 | Navigation (both domains), More dropdown, footer, routing, CTAs, features, Khabib banner, a11y, performance |
 | `explore.spec.ts` | `explore.json` | 8 | Spot market, trading categories (Hot/Gainers/Losers), known coins (BTC/ETH/SOL/DOGE/XRP), download CTA |
 | `markets.spec.ts` | `markets.json` | 10 | Column headers, data rows, page title, category tabs, search overlay, Bitcoin/Ethereum search, empty results |
-| `company.spec.ts` | `company.json` | 8 | Hero heading/description, stat values/labels (3 each), section headings (3), strengths, community |
+| `company.spec.ts` | `company.json` | 8 | Why MultiBank Group heading/description, stat values/labels (3 each), section headings (3), strengths, community |
 | `charFrequency.test.ts` | — | 12 | Example input, empty, single char, repeats, case sensitivity, spaces, special chars, unicode, order |
 | **Total** | | **60** | |
 
