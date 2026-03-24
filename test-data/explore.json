@@ -1,0 +1,12 @@
+{
+  "url": "https://mb.io/en/explore",
+  "pageHeading": "Markets at your fingertips",
+  "spotMarketHeading": "Spot market",
+  "categoryTabs": ["Hot", "Gainers", "Losers"],
+  "knownCoins": ["BTC", "ETH", "SOL", "DOGE", "XRP"],
+  "sections": [
+    "Today's top crypto prices",
+    "Market sentiment"
+  ],
+  "downloadCta": "Download the app"
+}
