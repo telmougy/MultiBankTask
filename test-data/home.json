@@ -1,0 +1,52 @@
+{
+  "url": "https://mb.io/en",
+  "navigation": {
+    "_note": "The site spans two domains. trade.mb.io has: Home, Markets, Trade, More. mb.io has: Explore, Features, Company.",
+    "tradePlatformNav": {
+      "visibleLinks": ["Home", "Markets"],
+      "authButtons": { "login": "Log In", "signUp": "Sign Up" }
+    },
+    "moreDropdownItems": [
+      { "text": "Spot Exchange", "hrefContains": "spot-exchange" },
+      { "text": "Institutional", "hrefContains": "institutional" },
+      { "text": "Buy & Sell", "hrefContains": "instant-buy" },
+      { "text": "Contact Us", "hrefContains": "contact-us" },
+      { "text": "FAQs", "hrefContains": "faq" },
+      { "text": "Why Multibank?", "hrefContains": "why-multibank" },
+      { "text": "Global Presence", "hrefContains": "global-presence" },
+      { "text": "Management", "hrefContains": "management" },
+      { "text": "Awards", "hrefContains": "awards" },
+      { "text": "Sponsorship", "hrefContains": "sponsorship" },
+      { "text": "Blog", "hrefContains": "blog" },
+      { "text": "Milestones", "hrefContains": "milestones" }
+    ],
+    "marketingSiteNav": {
+      "visibleLinks": ["Explore", "Features", "Company"],
+      "authButtons": { "login": "Sign in", "signUp": "Sign up" }
+    }
+  },
+  "ctaButtons": {
+    "downloadApp": "Download the app",
+    "openAccount": "Open an account"
+  },
+  "featureCards": [
+    "From insight to action in seconds",
+    "Earn more. See more. Stay in control.",
+    "Move funds effortlessly",
+    "Stay informed",
+    "Security of funds"
+  ],
+  "khabibBanner": {
+    "heading": "Unblemished. Unstoppable. United.",
+    "descriptionContains": "Unbeaten in the ring"
+  },
+  "tradingWidgets": ["Top Gainers", "Trending Now", "Top Losers"],
+  "footerLinks": [
+    "Terms & Conditions",
+    "Privacy Policy",
+    "Client Agreement",
+    "Cookie Policy",
+    "Acceptable Use Policy",
+    "Contact Us"
+  ]
+}
