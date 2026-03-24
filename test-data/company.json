@@ -1,0 +1,18 @@
+{
+  "url": "https://mb.io/en/company",
+  "navItem": "Company",
+  "heroHeading": "Why MultiBank Group?",
+  "heroDescriptionContains": "For nearly two decades",
+  "stats": [
+    { "value": "$2 trillion", "label": "Annual turnover" },
+    { "value": "2,000,000+", "label": "Customers worldwide" },
+    { "value": "25+", "label": "Offices globally" }
+  ],
+  "sectionHeadings": [
+    "A tradition of global leadership",
+    "Innovation with purpose",
+    "Integrity built into every decision"
+  ],
+  "strengthsHeading": "The strength behind MultiBank Group",
+  "communityHeading": "The latest news and discussions about MultiBank Group."
+}
