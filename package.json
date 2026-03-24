@@ -1,0 +1,20 @@
+{
+  "name": "multibank-qa-automation",
+  "version": "1.0.0",
+  "description": "Production-grade QA automation framework for the MultiBank trading platform",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:report": "npx playwright show-report",
+    "test:string": "npx playwright test task2-string-frequency",
+    "lint": "npx tsc --noEmit"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^25.5.0",
+    "typescript": "^5.7.0"
+  }
+}
