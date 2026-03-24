@@ -1,0 +1,25 @@
+{
+  "url": "https://trade.mb.io/en/markets",
+  "pageTitle": "Trending Assets",
+  "columnHeaders": ["#", "Coin", "Price", "24h %", "7d %", "Market Cap", "Circulating Supply", "Last 7 days"],
+  "categoryTabs": ["Favorites", "All", "Top Gainers", "Top Losers", "Top Volume"],
+  "defaultActiveTab": "All",
+  "knownPairsPerCategory": {
+    "All": "Bitcoin",
+    "Top Volume": "Bitcoin",
+    "Top Gainers": null,
+    "Top Losers": null
+  },
+  "formatPatterns": {
+    "price": "^\\$[\\d,]+\\.?\\d*$",
+    "changePercent": "^[+-]?\\d+\\.\\d+%$",
+    "marketCap": "^[A-Z]{2,5}\\s[\\d,.]+$"
+  },
+  "searchPlaceholder": "Search Assets",
+  "searchTestCases": [
+    { "query": "Bitcoin", "expectInResults": "Bitcoin" },
+    { "query": "Ethereum", "expectInResults": "Ethereum" },
+    { "query": "ZZZZZ", "expectInResults": null }
+  ],
+  "minimumVisibleRows": 5
+}
