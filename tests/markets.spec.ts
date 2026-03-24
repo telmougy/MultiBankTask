@@ -78,11 +78,10 @@ test.describe('Markets Page - Search', () => {
     // Click the visible search icon button to reveal the input
     const searchButton = marketsPage.page.locator('button[class*="icon-only"]:visible').last();
     await searchButton.click();
-    await marketsPage.page.waitForTimeout(500);
 
-    // After clicking: input should be visible with correct placeholder
+    // Wait for the search input to become visible after icon click
     const visibleInput = marketsPage.page.locator('input[placeholder*="Search"]:visible').first();
-    await expect(visibleInput).toBeVisible();
+    await visibleInput.waitFor({ state: 'visible', timeout: 5000 });
     const placeholder = await visibleInput.getAttribute('placeholder');
     expect(placeholder).toBe(marketsData.searchPlaceholder);
   });
