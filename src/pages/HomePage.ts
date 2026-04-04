@@ -9,8 +9,8 @@ import { BasePage } from './BasePage.js';
  * Verified structure:
  * - Hero: "Crypto for everyone" heading with subtext
  * - CTA buttons: "Download the app" (deep link), "Open an account" (trade.mb.io)
- * - Feature cards: "From insight to action...", "Earn more...", "Move funds...",
- *   "Stay informed", "Security of funds"
+ * - Feature cards: "The fastest way to trade", "Credit card & Bank transfers",
+ *   "Move funds effortlessly", "Stay informed", "Security of funds"
  * - Khabib partnership banner: "Unblemished. Unstoppable. United."
  * - Trading widgets: Top Gainers, Trending Now, Top Losers
  * - Footer: Terms, Privacy, Client Agreement, Cookie Policy, Acceptable Use, Contact Us
