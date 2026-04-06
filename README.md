@@ -107,7 +107,7 @@ MultiBankTask/
 | **Playwright** over Cypress/Selenium | Native cross-browser (Chromium, Firefox, WebKit), auto-wait, TypeScript-first, parallel execution |
 | **Composition** over inheritance | TopNav/Footer shared via composition in BasePage — avoids deep class hierarchies |
 | **Absolute URLs** over baseURL | Site spans two domains (`trade.mb.io` + `mb.io`); a single baseURL would break cross-domain tests |
-| **`domcontentloaded`** over `networkidle` | Next.js SPA has streaming/WebSocket connections; `networkidle` causes flakiness |
+| **Element-based waits** over `networkidle` | Next.js SPA has streaming/WebSocket connections; `networkidle` causes flakiness. Each page object waits for a key element instead |
 | **JSON test data** with `resolveJsonModule` | Zero extra dependencies; native TS import, easy to maintain |
 | **Format regex** over exact values | Prices/percentages change constantly; we assert the shape, not the value |
 | **Chromium-only CI** | Speed/cost trade-off; full 3-browser run available locally, evidence committed |

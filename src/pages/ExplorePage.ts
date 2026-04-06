@@ -27,7 +27,7 @@ export class ExplorePage extends BasePage {
 
   async navigate(): Promise<void> {
     await this.navigateTo('https://mb.io/en/explore');
-    await this.page.waitForLoadState('networkidle').catch(() => {});
+    await this.spotMarketHeading.waitFor({ state: 'visible', timeout: 10_000 }).catch(() => {});
   }
 
   async getPageHeading(): Promise<string> {
@@ -50,7 +50,7 @@ export class ExplorePage extends BasePage {
   async clickCategoryTab(tabName: string): Promise<void> {
     const tab = this.page.getByRole('button', { name: tabName, exact: true }).first();
     await tab.click();
-    await this.page.waitForLoadState('networkidle').catch(() => {});
+    await this.page.waitForLoadState('domcontentloaded').catch(() => {});
   }
 
   /** Checks if a known trading pair/coin is visible on the page */

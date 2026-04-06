@@ -29,8 +29,7 @@ export class HomePage extends BasePage {
 
   async navigate(): Promise<void> {
     await this.navigateTo('https://mb.io/en');
-    // Wait for content to render (SPA)
-    await this.page.waitForLoadState('networkidle').catch(() => {});
+    await this.downloadAppButton.waitFor({ state: 'visible', timeout: 10_000 }).catch(() => {});
   }
 
   async getHeroHeadingText(): Promise<string> {
