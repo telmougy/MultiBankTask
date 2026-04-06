@@ -1,6 +1,53 @@
 import { test, expect } from '../src/fixtures/test-fixtures.js';
 import marketsData from '../test-data/markets.json';
 
+// ---------------------------------------------------------------------------
+// Navigation & Layout (trade.mb.io)
+// ---------------------------------------------------------------------------
+
+test.describe('Markets Page - Navigation', () => {
+  test.describe.configure({ mode: 'parallel' });
+
+  test('should display the logo', async ({ marketsPage }) => {
+    await marketsPage.navigate();
+    await expect(marketsPage.topNav.logo).toBeVisible();
+  });
+
+  test('should display primary nav links', async ({ marketsPage }) => {
+    await marketsPage.navigate();
+    const visibleLinks = await marketsPage.topNav.getVisibleNavLinks();
+
+    for (const expectedLink of marketsData.navigation.visibleLinks) {
+      expect(
+        visibleLinks.some(link => link.includes(expectedLink)),
+        `Expected nav link "${expectedLink}" to be visible. Found: ${visibleLinks.join(', ')}`
+      ).toBeTruthy();
+    }
+  });
+
+  test('should display Log In and Sign Up buttons', async ({ marketsPage }) => {
+    await marketsPage.navigate();
+    await expect(marketsPage.topNav.loginButton).toBeVisible();
+    await expect(marketsPage.topNav.signUpButton).toBeVisible();
+  });
+
+  test('should open More dropdown with all expected items', async ({ marketsPage }) => {
+    await marketsPage.navigate();
+    const items = await marketsPage.topNav.getMoreDropdownItems();
+
+    for (const expected of marketsData.navigation.moreDropdownItems) {
+      expect(
+        items.some(item => item.text.includes(expected.text) && item.href.includes(expected.hrefContains)),
+        `Expected More dropdown item "${expected.text}" with href containing "${expected.hrefContains}"`
+      ).toBeTruthy();
+    }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Table Structure
+// ---------------------------------------------------------------------------
+
 test.describe('Markets Page - Table Structure', () => {
   test.describe.configure({ mode: 'parallel' });
 

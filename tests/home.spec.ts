@@ -8,12 +8,12 @@ test.describe.configure({ mode: 'parallel' });
 // Navigation & Layout
 // ---------------------------------------------------------------------------
 
-test.describe('Navigation - Marketing Site (mb.io)', () => {
+test.describe('Homepage - Navigation (mb.io)', () => {
   test('should display nav links on homepage', async ({ homePage }) => {
     await homePage.navigate();
     const visibleLinks = await homePage.topNav.getVisibleNavLinks();
 
-    for (const expectedLink of homeData.navigation.marketingSiteNav.visibleLinks) {
+    for (const expectedLink of homeData.navigation.visibleLinks) {
       expect(
         visibleLinks.some(link => link.includes(expectedLink)),
         `Expected nav link "${expectedLink}" to be visible. Found: ${visibleLinks.join(', ')}`
@@ -25,43 +25,6 @@ test.describe('Navigation - Marketing Site (mb.io)', () => {
     await homePage.navigate();
     await expect(homePage.topNav.loginButton).toBeVisible();
     await expect(homePage.topNav.signUpButton).toBeVisible();
-  });
-});
-
-test.describe('Navigation - Trading Platform (trade.mb.io)', () => {
-  test('should display the logo on markets page', async ({ marketsPage }) => {
-    await marketsPage.navigate();
-    await expect(marketsPage.topNav.logo).toBeVisible();
-  });
-
-  test('should display primary nav links', async ({ marketsPage }) => {
-    await marketsPage.navigate();
-    const visibleLinks = await marketsPage.topNav.getVisibleNavLinks();
-
-    for (const expectedLink of homeData.navigation.tradePlatformNav.visibleLinks) {
-      expect(
-        visibleLinks.some(link => link.includes(expectedLink)),
-        `Expected nav link "${expectedLink}" to be visible. Found: ${visibleLinks.join(', ')}`
-      ).toBeTruthy();
-    }
-  });
-
-  test('should display Log In and Sign Up buttons', async ({ marketsPage }) => {
-    await marketsPage.navigate();
-    await expect(marketsPage.topNav.loginButton).toBeVisible();
-    await expect(marketsPage.topNav.signUpButton).toBeVisible();
-  });
-
-  test('should open More dropdown with all expected items', async ({ marketsPage }) => {
-    await marketsPage.navigate();
-    const items = await marketsPage.topNav.getMoreDropdownItems();
-
-    for (const expected of homeData.navigation.moreDropdownItems) {
-      expect(
-        items.some(item => item.text.includes(expected.text) && item.href.includes(expected.hrefContains)),
-        `Expected More dropdown item "${expected.text}" with href containing "${expected.hrefContains}"`
-      ).toBeTruthy();
-    }
   });
 });
 

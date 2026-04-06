@@ -1,5 +1,23 @@
 {
   "url": "https://trade.mb.io/en/markets",
+  "navigation": {
+    "visibleLinks": ["Home", "Markets"],
+    "authButtons": { "login": "Log In", "signUp": "Sign Up" },
+    "moreDropdownItems": [
+      { "text": "Spot Exchange", "hrefContains": "spot-exchange" },
+      { "text": "Institutional", "hrefContains": "institutional" },
+      { "text": "Buy & Sell", "hrefContains": "instant-buy" },
+      { "text": "Contact Us", "hrefContains": "contact-us" },
+      { "text": "FAQs", "hrefContains": "faq" },
+      { "text": "Why Multibank?", "hrefContains": "why-multibank" },
+      { "text": "Global Presence", "hrefContains": "global-presence" },
+      { "text": "Management", "hrefContains": "management" },
+      { "text": "Awards", "hrefContains": "awards" },
+      { "text": "Sponsorship", "hrefContains": "sponsorship" },
+      { "text": "Blog", "hrefContains": "blog" },
+      { "text": "Milestones", "hrefContains": "milestones" }
+    ]
+  },
   "pageTitle": "Trending Assets",
   "columnHeaders": ["#", "Coin", "Price", "24h %", "7d %", "Market Cap", "Circulating Supply", "Last 7 days"],
   "categoryTabs": ["Favorites", "All", "Top Gainers", "Top Losers", "Top Volume"],
